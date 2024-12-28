@@ -13,7 +13,7 @@ const About = ({ language }) => {
           degree: "Data Science & IA (Octobre - Décembre 2024)",
         },
         {
-          school: "ESIEE Paris, France",
+          school: "ESIEE Paris, Noisy-le-Grand, France",
           degree: "Diplôme d’ingénieur en Génie Industriel (2019)",
         },
       ],
@@ -38,7 +38,7 @@ const About = ({ language }) => {
           degree: "Data Science & AI (October - December 2024)",
         },
         {
-          school: "ESIEE Paris, France",
+          school: "ESIEE Paris, Noisy-le-Grand, France",
           degree: "Engineering Degree in Industrial Engineering (2019)",
         },
       ],
