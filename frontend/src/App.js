@@ -8,7 +8,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
 const App = () => {
-  const [language, setLanguage] = useState('fr');
+  const [language, setLanguage] = useState('en');
 
   return (
     <Router>
