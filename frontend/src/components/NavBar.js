@@ -1,8 +1,9 @@
-// src/components/NavBar.js
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = ({ language, setLanguage }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <nav className="bg-[#0D0D0D] text-[#F2F2F2] py-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
@@ -13,27 +14,56 @@ const NavBar = ({ language, setLanguage }) => {
           </Link>
         </h1>
 
-        {/* Menu à droite */}
-        <div className="flex items-center space-x-12">
-          <ul className="flex space-x-8 text-lg font-medium">
+        {/* Bouton Hamburger pour petits écrans */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="text-[#F2F2F2] md:hidden focus:outline-none"
+        >
+          {isMenuOpen ? "✖" : "☰"}
+        </button>
+
+        {/* Menu principal */}
+        <div
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } md:flex space-x-12 items-center`}
+        >
+          {/* Liens de navigation */}
+          <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-lg font-medium">
             <li>
-              <Link to="/" className="hover:text-[#56828C]">
-                {language === 'fr' ? 'Accueil' : 'Home'}
+              <Link
+                to="/"
+                className="hover:text-[#56828C]"
+                onClick={() => setIsMenuOpen(false)} // Fermer le menu au clic
+              >
+                {language === "fr" ? "Accueil" : "Home"}
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-[#56828C]">
-                {language === 'fr' ? 'À propos' : 'About'}
+              <Link
+                to="/about"
+                className="hover:text-[#56828C]"
+                onClick={() => setIsMenuOpen(false)} // Fermer le menu au clic
+              >
+                {language === "fr" ? "À propos" : "About"}
               </Link>
             </li>
             <li>
-              <Link to="/projects" className="hover:text-[#56828C]">
-                {language === 'fr' ? 'Projets' : 'Projects'}
+              <Link
+                to="/projects"
+                className="hover:text-[#56828C]"
+                onClick={() => setIsMenuOpen(false)} // Fermer le menu au clic
+              >
+                {language === "fr" ? "Projets" : "Projects"}
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-[#56828C]">
-                {language === 'fr' ? 'Contact' : 'Contact'}
+              <Link
+                to="/contact"
+                className="hover:text-[#56828C]"
+                onClick={() => setIsMenuOpen(false)} // Fermer le menu au clic
+              >
+                {language === "fr" ? "Contact" : "Contact"}
               </Link>
             </li>
           </ul>
@@ -41,18 +71,18 @@ const NavBar = ({ language, setLanguage }) => {
           {/* Switch FR | EN */}
           <div className="text-lg font-medium flex space-x-2">
             <button
-              onClick={() => setLanguage('fr')}
+              onClick={() => setLanguage("fr")}
               className={`${
-                language === 'fr' ? 'font-bold text-[#56828C]' : 'text-gray-400'
+                language === "fr" ? "font-bold text-[#56828C]" : "text-gray-400"
               }`}
             >
               FR
             </button>
             <span>|</span>
             <button
-              onClick={() => setLanguage('en')}
+              onClick={() => setLanguage("en")}
               className={`${
-                language === 'en' ? 'font-bold text-[#56828C]' : 'text-gray-400'
+                language === "en" ? "font-bold text-[#56828C]" : "text-gray-400"
               }`}
             >
               EN
