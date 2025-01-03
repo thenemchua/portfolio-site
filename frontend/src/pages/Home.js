@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = ({ language }) => {
   const content = {
     fr: {
-      welcome: "Bienvenue sur mon portfolio !",
+      welcome: "Bienvenue sur mon site web !",
       help: "Cliquez sur une commande pour commencer",
       about: (
         <>
@@ -52,7 +52,7 @@ const Home = ({ language }) => {
       commands: ["help", "about", "projects", "contact", "clear"],
     },
     en: {
-      welcome: "Welcome to my portfolio!",
+      welcome: "Welcome to my website!",
       help: "Click a command to get started",
       about: (
         <>

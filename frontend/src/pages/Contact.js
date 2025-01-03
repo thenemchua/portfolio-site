@@ -1,5 +1,5 @@
-// src/pages/Contact.js
 import React from 'react';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Contact = ({ language }) => {
   const content = {
@@ -9,7 +9,6 @@ const Contact = ({ language }) => {
       email: "Email",
       linkedin: "LinkedIn",
       github: "GitHub",
-      phone: "Téléphone",
       formTitle: "Envoyez-moi un message",
       namePlaceholder: "Votre nom",
       emailPlaceholder: "Votre email",
@@ -22,7 +21,6 @@ const Contact = ({ language }) => {
       email: "Email",
       linkedin: "LinkedIn",
       github: "GitHub",
-      phone: "Phone",
       formTitle: "Send me a message",
       namePlaceholder: "Your name",
       emailPlaceholder: "Your email",
@@ -41,30 +39,35 @@ const Contact = ({ language }) => {
       {/* Coordonnées */}
       <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-2xl mb-8">
         <h2 className="text-2xl font-semibold mb-4">{currentContent.contactInfo}</h2>
-        <ul className="text-lg space-y-2">
-          <li>
-            {currentContent.email}:{" "}
-            <a href="mailto:hello.alainlim@gmail.com" className="text-[#56828C]">
+        <ul className="text-lg space-y-4">
+          <li className="flex items-center">
+            <FaEnvelope className="text-[##0D0D0D] text-2xl mr-4" />
+            <a href="mailto:hello.alainlim@gmail.com" className="text-[#56828C] hover:underline">
               hello.alainlim@gmail.com
             </a>
           </li>
-          <li>
-            {currentContent.linkedin}:{" "}
+          <li className="flex items-center">
+            <FaLinkedin className="text-[##0D0D0D] text-2xl mr-4" />
             <a
               href="https://www.linkedin.com/in/alain-lim-854950114/"
-              className="text-[#56828C]"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#56828C] hover:underline"
             >
               Alain Lim
             </a>
           </li>
-          <li>
-            {currentContent.github}:{" "}
-            <a href="https://github.com/thenemchua" className="text-[#56828C]">
+          <li className="flex items-center">
+            <FaGithub className="text-[##0D0D0D] text-2xl mr-4" />
+            <a
+              href="https://github.com/thenemchua"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#56828C] hover:underline"
+            >
               thenemchua
             </a>
           </li>
-          {/* Si vous voulez ajouter un numéro de téléphone */}
-          {/* <li>{currentContent.phone}: <a href="tel:+1234567890" className="text-[#56828C]">+33 6 12 34 56 78</a></li> */}
         </ul>
       </div>
 
