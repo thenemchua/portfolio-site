@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import TSP from './pages/TSP';
 
 const App = () => {
   const [language, setLanguage] = useState('en');
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/about" element={<About language={language} />} />
         <Route path="/projects" element={<Projects language={language} />} />
         <Route path="/contact" element={<Contact language={language} />} />
+        <Route path="/tsp" element={<TSP />} />
       </Routes>
     </Router>
   );
