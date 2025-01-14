@@ -27,6 +27,13 @@ const Projects = ({ language }) => {
           technologies: "geopandas, matplotlib, scipy, networkx",
           link: "https://github.com/thenemchua/sncf_railway_graph",
         },
+        {
+          icon: <FaCode />,
+          name: "Compétition Kaggle - Titanic",
+          description: "Compétition Kaggle sur le dataset Titanic, Score: 0.78468 (Top 10%)",
+          technologies: "matplotlib, pandas, sklearn, xgboost",
+          link: "https://github.com/thenemchua/kaggle-titanic",
+        },
       ],
     },
     en: {
@@ -52,6 +59,13 @@ const Projects = ({ language }) => {
           description: "Created a graph and displayed it using open source data",
           technologies: "geopandas, matplotlib, scipy, networkx",
           link: "https://github.com/thenemchua/sncf_railway_graph",
+        },
+        {
+          icon: <FaCode />,
+          name: "Kaggle Competition - Titanic",
+          description: "Kaggle competition on the Titanic dataset, Score: 0.78468 (Top 10%)",
+          technologies: "matplotlib, pandas, sklearn, xgboost",
+          link: "https://github.com/thenemchua/kaggle-titanic",
         },
       ],
     },
